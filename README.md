@@ -85,6 +85,7 @@ It reports sentence-length distribution, nominalizations, noun-stack candidates,
 │   └── rewrite-moves.md           # before/after catalogue
 ├── scripts/
 │   └── readability_check.py       # dependency-free candidate finder
+├── LICENSE
 └── README.md
 ```
 
@@ -219,6 +220,10 @@ Full citations and notes are in [`references/evidence.md`](references/evidence.m
    ```
 
 5. Keep the installed skill a symlink to this repository. That way the skill and the source cannot drift.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
 
 ## Acknowledgements
 

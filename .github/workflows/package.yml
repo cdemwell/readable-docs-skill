@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   package:
     runs-on: ubuntu-latest
@@ -13,9 +16,11 @@ jobs:
 
       - name: Create package structure
         run: |
-          mkdir -p package/references
-          cp readable-docs-skill/skills/informed-patient/SKILL.md package/
-          cp -r readable-docs-skill/references/* package/references/
+          mkdir -p package/references package/scripts
+          cp SKILL.md package/
+          cp LICENSE package/
+          cp -r references/* package/references/
+          cp -r scripts/* package/scripts/
 
       - name: Create zip archive
         run: |

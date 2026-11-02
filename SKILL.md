@@ -1,6 +1,7 @@
 ---
 name: readable-docs
 description: Make documents easier for people to read and understand. Use when writing, editing, or reviewing docs, READMEs, reports, design docs, proposals, emails, or any long-form prose where comprehension matters more than density.
+license: MIT
 metadata:
   version: 2.0
 ---
@@ -135,11 +136,11 @@ Do all eight. Do not skip the reader-goal test.
 
 When you can, test with real readers: give them a find/understand/use task and record where they hesitate. That is the test the standards actually require.
 
-Optional: run `scripts/readability_check.py` before and after. It flags long sentences, noun stacks, nominalizations, filler, existential *there*, light verbs, and cohesion gaps. Treat flags as review prompts, not errors.
+Optional: run `${CLAUDE_SKILL_DIR}/scripts/readability_check.py` before and after. It flags long sentences, noun stacks, nominalizations, filler, existential *there*, light verbs, and cohesion gaps. Treat flags as review prompts, not errors.
 
 ```bash
-python3 scripts/readability_check.py document.md
-python3 scripts/readability_check.py document.md --json
+python3 "${CLAUDE_SKILL_DIR}/scripts/readability_check.py" document.md
+python3 "${CLAUDE_SKILL_DIR}/scripts/readability_check.py" document.md --json
 ```
 
 ## Scoring
